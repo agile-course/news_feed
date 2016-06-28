@@ -1,0 +1,26 @@
+{
+  "name": "news_feed",
+  "homepage": "https://github.com/agile-course/news_feed",
+  "authors": [
+    "Daniel Hackner <dan.hackner@gmail.com>"
+  ],
+  "description": "News Feed",
+  "main": [
+    "js/project.js",
+    "sass/project.scss"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.7",
+    "angular-bootstrap": "^1.3.3",
+    "angular-resource": "^1.5.7",
+  }
+}
