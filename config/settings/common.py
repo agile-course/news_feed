@@ -39,6 +39,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+    'news_feed.post',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
