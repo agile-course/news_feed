@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
 
     url(r'^post/', include('news_feed.post.urls', namespace='post')),
+    url(r'^subreddit/', include('news_feed.subreddit.urls', namespace='subreddit')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
