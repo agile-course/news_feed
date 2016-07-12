@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row" ng-controller="HomepageController">
+    <div class="posts">
+        <ul>
+            <div class="post" ng-repeat="post in posts">
+                <heading ng-bind="post.title"></heading>
+                <content ng-bind="post.content"></content>
+            </div>
+            <div class="navbar-form">
+                <input type="text" ng-model="input_post.title">
+                <input type="text" ng-model="input_post.content">
+                <button ng-click="createPost(input_post.title, input_post.content)" type="submit" class="btn">Create Post</button>
+            </div>
+        </ul>
+    </div>
+    <aside class="subreddits">
+        <uib-tabset vertical="true" type="pills">
+            <uib-tab heading="global" select="refreshPosts('global')"></uib-tab>
+            <uib-tab heading="{[{subreddit.title}]}" select="refreshPosts(subreddit.id)" ng-repeat="subreddit in subreddits">{[{ subreddit.description  }]}</uib-tab>
+        </uib-tabset>
+        <div class="navbar-form">
+            <input type="text" ng-model="input_sub.title">
+            <input type="text" ng-model="input_sub.description">
+            <button ng-click="createSubreddit(input_sub.title, input_sub.description)" type="submit" class="btn">Create Subreddit</button>
+        </div>
+    </aside>
+</div>
+{% endblock content %}

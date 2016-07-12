@@ -1,0 +1,33 @@
+{% load staticfiles i18n %}<!DOCTYPE html>
+<html lang="en" ng-app="NewsFeed">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}News Feed{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" ">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link href="{% static 'css/project.css' %}" rel="stylesheet">
+
+        <script src="{% static 'bower_components/angular/angular.min.js' %}"></script>
+        <script src="{% static 'bower_components/angular-resource/angular-resource.min.js' %}"></script>
+        <script src="{% static 'bower_components/angular-animate/angular-animate.min.js' %}"></script>
+        <script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>
+
+        <script src="{% static 'js/project.js' %}"></script>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            {% block content %}{% endblock content %}
+        </div>
+    </body>
+</html>
+
